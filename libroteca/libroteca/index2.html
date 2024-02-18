@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Libroteca</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/dc173c1861.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="js/carrousel.js" defer></script>
+<script src="js/dropdown.js"></script>
+<!-- añado defer para asegurarme de que se ha cargado el Vue antes de leer templates.js-->
+<script src="js/templates.js" defer></script>
+<!-- conexión a la base de datos-->
+<script src="js/conexion.js"></script>
+
+
+<div id="app">
+
+<div id="menu">
+    <!-- home -->
+    <div id="home">
+        <a href="index2.html">
+            <img id="logo" src="img/logo.png" alt="Logo de la libroteca">
+        </a>
+    </div>
+    <!-- productos dropdown -->
+    <div class="dropdown">
+        <button class="dropbtn"><i class="fa-solid fa-book"></i> Productos</button>
+        <div class="dropdown-content">
+            <a href="#" id="1" @click="mostrarPlantilla(1)">El Nombre del Viento</a><br>
+            <a href="#" id="2" @click="mostrarPlantilla(2)">El Príncipe Cruel</a><br>
+            <a href="#" id="3" @click="mostrarPlantilla(3)">Memorias de Idhún</a><br>
+            <a href="#" id="4" @click="mostrarPlantilla(4)">El Imperio Final</a><br>
+            <a href="#" id="5" @click="mostrarPlantilla(5)">Origen</a><br>
+        </div>
+    </div>
+    <!-- sobre nosotros -->
+    <div id="about">
+        <button class="about" @click="mostrarPlantilla('about')"><i class="fa-solid fa-users"></i> Sobre nosotros</button>
+    </div>
+    <!-- formulario -->
+    <div id="formulario">
+        <button class="form" @click="mostrarPlantilla('formulario')"><i class="fa-solid fa-right-to-bracket"></i> Acceder</button>
+    </div>
+    <!-- idioma -->
+    <div class="dropdown-lang">
+        <button class="lang-btn"><i class="fa-solid fa-globe"></i> Idioma</button>
+        <div class="dropdown-idioma">
+            <a href="#">English</a><br>
+            <a href="#">Castellano</a><br>
+        </div>
+    </div>
+    <!-- carrito -->
+    <div id="carro">
+        <button class="carrito"><i class="fa-solid fa-cart-shopping"></i> Carrito</button>
+    </div>
+</div>
+<br>
+<!-- carroussel -->
+<div id="slide" class="carousel-products"></div>
+<script>
+  // initialize
+  $(document).ready(function() {
+    $("#slide").slizz({
+      width: '300',
+      height: '400',
+      space: '10',
+      max: '1050',
+      title: true,
+      bullets: false,
+      lang: 'en',
+      products: [{
+          id: '1',
+          link: '#',
+          seo: 'Buy Me'
+        },
+        {
+            id: '1',
+          link: '#',
+          seo: 'Buy Me More'
+        },
+        {
+            id: '1',
+          link: '#',
+          seo: 'Buy Me'
+        },
+        {
+            id: '1',
+          link: '#',
+          seo: 'Buy Me More'
+        },
+        {
+            id: '1',
+          link: '#',
+          seo: 'Buy Me'
+        }
+      ]
+    });
+  });
+</script>
+<br>
+<!-- main -->
+<div id="main">
+  <component :is="componenteActual" @anadir-al-carrito="agregarAlCarrito" ></component>
+</div>
+<!-- footer -->
+<div id="footer">
+    <p>© 2021 La Libroteca</p>
+    <p>Hecho con <i class="fa-solid fa-heart"></i> por Aitziber Solís</p>  
+</div>
+</div>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</body>
+</html>

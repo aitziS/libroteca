@@ -1,0 +1,314 @@
+*{
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+
+
+#menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu > div {
+    flex: 1;
+    text-align: center;
+}
+
+#logo{
+    border-radius: 50%;
+    width: 80px;
+    height: auto;
+}
+
+.portada{
+  width: 200px;
+  height: auto;
+}
+
+button{
+    background: #7ACED8;
+    color: rgb(25, 26, 27);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/*dropdown menu*/
+.dropbtn {
+    background: #7ACED8;
+    color: rgb(25, 26, 27);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* Oculta el menú desplegable inicialmente */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+button:hover {
+    background-color: #4D90D5;
+}
+
+/*idioma dropdown*/
+.lang-btn {
+    background-color: #7ACED8;
+    color: rgb(25, 26, 27);
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-idioma {
+    display: none; /* Oculta el menú desplegable inicialmente */
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-lang .dropdown-idioma a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-idioma a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown-lang:hover .lang-btn {
+    background-color: #4D90D5;
+}
+
+/* carroussel */
+.carousel-products {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*estilo del espacio donde va el carrusel*/
+  .carousel-products .products-wrap {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 200px;
+  }
+  
+  .carousel-products .products-wrap ul {
+    display: block;
+    list-style: none;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .carousel-products .products-wrap ul li {
+    display: block;
+    float: left;
+    position: relative;
+    width: 350px;
+    height: 200px; 
+    line-height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.products-list li .item {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    text-align: center;
+}
+
+.products-list li .item .prodHover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    display: block;
+    transition: all ease 0.5s;
+    background-color: transparent;
+    color: transparent;
+    font-size: 22px;
+    font-weight: 600;
+}
+  
+  /* Product Name */
+  .products-list li .item .prodName {
+    height: 20px;
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+    color: grey;
+    font-size: 16px;
+    display: block;
+    z-index: 3;
+  }
+  
+  /* Product Image */
+  .products-list li .item .prodImg {
+    transform: scale(1);
+    transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+      -webkit-transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    -webkit-transition: -webkit-transform 400ms
+      cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: -webkit-transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: transform 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  /* Hover */
+  .products-list li .item:hover .prodImg {
+    -webkit-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    transform: scale(0.95);
+  }
+
+  .prodImg{
+    height: 170px; /*altura de la imagen*/
+  }
+  
+  .products-list li .item:hover .prodHover {
+    background-color: rgba(209, 255, 237, 0.199);
+    border: 1px solid #7ACED8;
+    color: white;
+    z-index: 2;
+  }
+  
+  /* Bullets */
+  .carousel-products .prod-breadcrump {
+    margin-top: 15px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .carousel-products .prod-breadcrump .bullets {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 10px;
+    border: black thin solid;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  .carousel-products .prod-breadcrump .bullets.actif {
+    background-color: black;
+  }
+
+  .login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  .login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-group {
+    margin-bottom: 15px;
+  }
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .form-group button:hover {
+    background-color: #0056b3;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+p {
+    line-height: 1.6;
+    color: #666;
+    text-align: justify;
+    margin-bottom: 0;
+}
+
+.libro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.portada {
+  width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.informacion {
+  flex: 1;
+}
+
+.precio {
+  margin-top: 10px;
+  text-align: right;
+}

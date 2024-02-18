@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link a style.css-->
+    <link rel="stylesheet" href="style.css">
+    <!-- link a bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- fontawesome-->
+    <script src="https://kit.fontawesome.com/dc173c1861.js" crossorigin="anonymous"></script>
+    <title>Libroteca</title>
+</head>
+<body>
+    <!--fontawesome script-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js"></script>
+    <!-- bootstrap scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.js"
+			  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+			  crossorigin="anonymous"></script>
+
+
+    
+        <div id="home">
+            <a href="#">
+                <img id="logo" src="img/logo.png" alt="Logo de la libroteca">
+            </a>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Opción 1</a><br>
+                <a href="#">Opción 2</a><br>
+                <a href="#">Opción 3</a><br>
+            </div>
+        </div>
+        <script>
+        $(document).ready(function() {
+            $(".dropdown-content").hide();
+
+        $(".dropbtn").click(function() {
+            $(".dropdown-content").slideToggle("slow");
+            });
+        });
+        </script>
+
+        <div id="about">
+            <p><i class="fa-solid fa-users"></i> Sobre nosotros</p>
+        </div>
+        <div id="formulario">
+            <p><i class="fa-solid fa-right-to-bracket"></i> Iniciar sesión / Registrarse</p>
+        </div>
+        
+        <div id="idioma">
+            <p><i class="fa-solid fa-globe"></i> Idioma</p>
+            <ul class="menu-desplegable">
+                <li><a href="">Español</a></li>
+                <li><a href="">English</a></li>
+                <li><a href="">Euskara</a></li>
+            </ul>
+        </div>
+        <div id="carro">
+            <p><i class="fa-solid fa-cart-shopping"></i> Carrito</p>
+        </div>
+
+       
+
+
+    <div id="carroussel">
+        Carrusel
+    </div>
+
+    <div id="main">
+        Main
+    </div> 
+
+    <div id="footer">
+        
+    </div>
+
+
+    <!-- main.js-->
+    <script src="main.js"></script>
+</body>
+</html>

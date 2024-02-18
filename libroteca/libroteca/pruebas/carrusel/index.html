@@ -1,0 +1,109 @@
+<!-- jquery script-->
+<!-- link css y js-->
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/gh/edgarvaguilar/slizz/dist/slizz.js"></script>
+<!-- jquery script-->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="main.js"></script>
+<div id="menu">
+    <div id="home">
+        <a href="#">
+            <img id="logo" src="logo.png" alt="Logo de la libroteca">
+        </a>
+    </div>
+    <div id="productos">
+        <ul id="menu-productos">Productos
+            <li>Libro 1</li>
+            <li>Libro 2</li>
+            <li>Libro 3</li>
+            <li>Libro 4</li>
+            <li>Libro 5</li>
+        </ul>
+    </div>
+    <div id="about">Sobre nosotros</div>
+    <div id="formulario">Registro</div>
+    <div id="carro">Carrito</div>
+    <div id="idioma">Idioma</div>
+   
+</div>
+<div id="slide" class="carousel-products"></div>
+
+<script>
+  // initialize
+  $(document).ready(function() {
+    $("#slide").slizz({
+      width: '300',
+      height: '400',
+      space: '10',
+      max: '1050',
+      title: true,
+      bullets: false,
+      lang: 'en',
+      products: [{
+          sku: '341782',
+          color: '086',
+          link: '#',
+          seo: 'Buy Me'
+        },
+        {
+          sku: '346578',
+          color: '653',
+          link: '#',
+          seo: 'Buy Me More'
+        },
+        {
+          sku: '350953',
+          color: '182',
+          link: '#',
+          seo: 'Buy Me'
+        },
+        {
+          sku: '353794',
+          color: '182',
+          link: '#',
+          seo: 'Buy Me More'
+        },
+        {
+          sku: '354002',
+          color: '703',
+          link: '#',
+          seo: 'Buy Me'
+        },
+        {
+          sku: '356124',
+          color: '703',
+          link: '#',
+          seo: 'Buy Me More'
+        },
+        {
+          sku: '356125',
+          color: '209',
+          link: '#',
+          seo: 'Buy Me'
+        },
+        {
+          sku: '356126',
+          color: '703',
+          link: '#',
+          seo: 'Buy Me More'
+        },
+        {
+          sku: '356986',
+          color: '779',
+          link: '#',
+          seo: 'Buy Me More'
+        },
+      ]
+      //	products:  products
+    });
+  });
+</script>
+
+<div id="main">
+  Main
+</div> 
+
+<div id="footer">
+  Footer
+</div>
